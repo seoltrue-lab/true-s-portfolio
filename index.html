@@ -148,6 +148,9 @@ footer b{font-weight:700}
 .cap{padding-top:12px}
 @media (max-width:1100px){.grid{row-gap:56px}}
 @media (max-width:760px){.grid{row-gap:44px}.cap{padding-top:10px}}
+
+/* main title: name */
+.state{font-size:clamp(44px,6.4vw,116px);font-weight:700;line-height:1.02;letter-spacing:-.045em;max-width:none}
 </style>
 </head>
 <body>
@@ -180,7 +183,7 @@ function tiles(list){
 function home(){
  var row='';for(var k=0;k<4;k++)row+=B('이름 (영문 로고타입)')+'<span class="reg">®</span>';
  var all=P.map(function(_,i){return i;});
- return '<header><h1 class="state">I design (labels) and (packages) for traditional Korean liquor.</h1><nav class="menu">'+nav('')+'</nav></header>'+
+ return '<header><h1 class="state">SEOL JINSIL’s<br>Portfolio</h1><nav class="menu">'+nav('')+'</nav></header>'+
  '<div class="tagline">Brand · Label · Package Designer</div>'+
  '<div class="marquee"><div class="track">'+row+row+'</div></div>'+
  '<section class="lead"><h2>From the label<br>to the box. One bottle at a time.</h2>'+
