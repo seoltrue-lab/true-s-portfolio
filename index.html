@@ -236,8 +236,6 @@ body.ondark .mini nav a.on{border-color:#fff}
 @media (max-width:760px){.wgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;width:calc(100% - 8px)}}
 .pagehead.wk{width:calc(100% - 10vw);max-width:1280px;margin:0 auto;padding-left:0;padding-right:0}
 @media (max-width:760px){.pagehead.wk{width:calc(100% - 40px)}}
-.grid.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
-@media (max-width:760px){.grid.g3{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 </head>
 <body>
@@ -291,7 +289,7 @@ function wtiles(list){
  }).join('')+'</div>';
 }
 function works(){
- return mini('works')+'<div class="pagehead"><h1>Works</h1><p>'+P.length+' projects · 2023 – 2026</p></div>'+tiles(P.map(function(_,i){return i;})).replace('class="grid"','class="grid g3"')+foot();
+ return mini('works')+'<div class="pagehead"><h1>Works</h1><p>'+P.length+' projects · 2023 – 2026</p></div>'+tiles(P.map(function(_,i){return i;}))+foot();
 }
 function detail(i){
  var p=P[i],n=P.length,a=(i+n-1)%n,b=(i+1)%n;
