@@ -289,7 +289,7 @@ function wtiles(list){
  }).join('')+'</div>';
 }
 function works(){
- return mini('works')+'<div class="pagehead wk"><h1>Works</h1><p>'+P.length+' projects · 2023 – 2026</p></div>'+wtiles(W_TILES)+foot();
+ return mini('works')+'<div class="pagehead"><h1>Works</h1><p>'+P.length+' projects · 2023 – 2026</p></div>'+tiles(P.map(function(_,i){return i;}))+foot();
 }
 function detail(i){
  var p=P[i],n=P.length,a=(i+n-1)%n,b=(i+1)%n;
