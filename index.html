@@ -271,6 +271,7 @@ body.ondark .mini nav a.on{border-color:#fff}
 .flip{position:relative;aspect-ratio:16/9;margin-top:clamp(40px,6vw,100px)}
 .flip img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;animation:flipf var(--fd) step-end infinite}
 .flip img:first-child{opacity:1}
+.flip:hover img{animation:none;opacity:0}.flip:hover img:last-child{opacity:1}
 @keyframes flipf{0%{opacity:1}25%,100%{opacity:0}}
 @media (prefers-reduced-motion:reduce){.flip img{animation:none;opacity:0}.flip img:last-child{opacity:1}}
 </style>
