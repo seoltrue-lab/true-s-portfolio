@@ -277,6 +277,7 @@ body.ondark .mini nav a.on{border-color:#fff}
 @media (prefers-reduced-motion:reduce){.flip img{animation:none;opacity:0}.flip img:last-child{opacity:1}}
 
 /* contact info */
+footer.min{border-top:0;margin-top:160px}footer.min small{padding-top:0}
 .cont{display:block}
 .cinfo{display:grid;grid-template-columns:140px 1fr;gap:18px 24px;font-size:clamp(20px,2vw,32px);line-height:1.4;border-top:1px solid #000;padding-top:28px;max-width:760px}
 .cinfo dt{color:#777;font-weight:400;font-size:.6em;padding-top:.45em}
@@ -307,7 +308,7 @@ var app=document.getElementById('app');
 function B(t,c){return '<div class="blank'+(c?' '+c:'')+'">'+t+'</div>';}
 function nav(cur){return MENU.map(function(m){return '<a href="#/'+m[0]+'"'+(m[0]===cur?' class="on"':'')+'>'+m[1]+'</a>';}).join('');}
 function mini(cur){return '<div class="mini"><a href="#/" class="blank logo">로고 · 이름</a><nav>'+nav(cur)+'</nav></div>';}
-function foot(){return '<footer><div class="col"><b style="font-weight:600">Package · Graphic Designer</b><a>설진실</a></div>'+
+function foot(min){if(min)return '<footer class="min"><small>© 2026. All rights reserved.</small></footer>';return '<footer><div class="col"><b style="font-weight:600">Package · Graphic Designer</b><a>설진실</a></div>'+
  '<div class="col"><span>Phone</span><a href="tel:0101010101">0101010101</a><span>Email</span><a href="mailto:randa12@naver.com">randa12@naver.com</a></div><div class="col"><span>Instagram</span><a href="https://www.instagram.com/jalhaja__/" target="_blank" rel="noopener">@jalhaja__</a></div><small>© 2026. All rights reserved.</small></footer>';}
 function tiles(list,wide){
  return '<div class="grid">'+list.map(function(i){var p=P[i];
@@ -363,7 +364,7 @@ function about(){
  '<dl class="meta"><dt>Clients</dt><dd>코레일, 감홍로, 전주이강주, 추성고을, 아름주가, 대한주조, 열우물양조장, 갈기산포도농원, 녹천주조장, 오뉴</dd><dt>Tools</dt><dd>Illustrator, Photoshop, InDesign, Procreate</dd></dl></div></section>'+'<section class="wid"><h3>What I do</h3><div class="cols"><div class="col"><span class="n">01</span><h4>Package Design</h4><p>라벨, 1병입 케이스, 선물세트, 카톤박스까지 제품의 겉모습을 디자인합니다. 병과 케이스의 형태에 맞춰 그래픽을 배치하고, 진열됐을 때의 인상까지 생각합니다.</p></div><div class="col"><span class="n">02</span><h4>Graphic Design</h4><p>캐릭터, 일러스트, 캘리그라피로 제품만의 비주얼을 만들고, 상세페이지·배너·SNS 콘텐츠와 포스터로 온라인과 오프라인에서 이어지게 보여 줍니다.</p></div><div class="col"><span class="n">03</span><h4>Production</h4><p>금박 같은 후가공 지정, 양조장 컨펌, 인쇄 발주, 제품 촬영 보정까지 디자인이 실제 제품으로 나오는 과정을 끝까지 챙깁니다.</p></div></div></section><section class="hist"><h3>Experience</h3><div class="list"><div class="row"><span>2023 – 현재</span><span>(유)우리술상회</span><span>패키지·그래픽디자인 · 대리 <em class="pro">(2026.06 승진)</em></span></div><div class="row"><span>2021.01 – 2022.07</span><span>(주)이랜드월드</span><span>사진 리터칭 · 사원</span></div><div class="row"><span>2019.03 – 2020.08</span><span>(주)어바웃블랭크</span><span>그래픽디자인 · 사원</span></div></div><h3>Education</h3><div class="list"><div class="row"><span>2018.02</span><span>경일대학교 사진영상학부</span><span>졸업</span></div></div><h3>Certificates</h3><div class="list two"><div class="row"><span>컬러리스트기사</span></div><div class="row"><span>컴퓨터그래픽스운용기능사</span></div></div></section>'+foot();
 }
 function contact(){
- return mini('contact')+'<div class="pagehead"><h1>Contact</h1><p>Package · Graphic Designer</p></div><section class="cont"><dl class="cinfo"><dt>Name</dt><dd>설진실</dd><dt>Phone</dt><dd><a href="tel:0101010101">0101010101</a></dd><dt>Email</dt><dd><a href="mailto:randa12@naver.com">randa12@naver.com</a></dd><dt>Instagram</dt><dd><a href="https://www.instagram.com/jalhaja__/" target="_blank" rel="noopener">@jalhaja__</a></dd></dl></section>'+foot();
+ return mini('contact')+'<div class="pagehead"><h1>Contact</h1><p>Package · Graphic Designer</p></div><section class="cont"><dl class="cinfo"><dt>Name</dt><dd>설진실</dd><dt>Phone</dt><dd><a href="tel:0101010101">0101010101</a></dd><dt>Email</dt><dd><a href="mailto:randa12@naver.com">randa12@naver.com</a></dd><dt>Instagram</dt><dd><a href="https://www.instagram.com/jalhaja__/" target="_blank" rel="noopener">@jalhaja__</a></dd></dl></section>'+foot(1);
 }
 function render(){
  var h=location.hash.replace(/^#\/?/,''),m=h.match(/^work\/(\d+)/);
